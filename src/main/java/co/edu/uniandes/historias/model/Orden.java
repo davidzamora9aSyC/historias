@@ -12,6 +12,7 @@ public class Orden {
 
     @Id
     private ObjectId _id;
+
     private String doctor;
     private String medicina;
 
@@ -23,6 +24,32 @@ public class Orden {
         this.medicina = medicina;
     }
 
+    public ObjectId getId() {
+        return this._id;
+    }
+
+    public void setId(ObjectId _id) {
+        this._id = _id;
+    }
+    public void setIdCustom() {
+        this._id = new ObjectId();
+    }
+
+    public String getDoctor() {
+        return this.doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public String getMedicina() {
+        return this.medicina;
+    }
+
+    public void setMedicina(String medicina) {
+        this.medicina = medicina;
+    }
 
 
 

@@ -1,6 +1,8 @@
 package co.edu.uniandes.historias.model;
 
 import java.util.List;
+
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class HistoriaClinica {
 
     @Id
-    private String _id;
+    private ObjectId _id;
     private String pacienteNombre;
     private List<Orden> ordenes;
     private String diagnostico;
@@ -27,11 +29,11 @@ public class HistoriaClinica {
 
 
 
-    public String getId() {
+    public ObjectId getId() {
         return _id;
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this._id = id;
     }
 
